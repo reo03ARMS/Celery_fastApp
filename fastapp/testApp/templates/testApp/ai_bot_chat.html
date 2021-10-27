@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>AIチャットボット</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+    <h1>AIチャットボット</h1>
+    <p>テキストを入力</p>
+    <form method="post">
+        {% csrf_token %}
+        <p>質問を入力</p>
+        <input type="text" name="input_textA" id="input_textA">
+        <p>理想の答えを入力</p>
+        <input type="text" name="input_ANS_text" id="input_ANS_text">
+  
+        <input type="submit" name="sub_button" value="送信">
+
+    </form>
+
+    <h1>結果！</h1>
+    <tbody>        
+        <td>出力値:</td>
+        <td>{{ result }}</td>
+    </tbody>
+    </body>
+    <a href="http://127.0.0.1:8000/testApp/ai_bot"><input type="submit" value="更新"></a>
+
+</html>
